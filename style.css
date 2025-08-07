@@ -1,0 +1,190 @@
+/* 全局樣式 */
+body {
+    font-family: 'Microsoft JhengHei', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* 側邊欄樣式 */
+.sidebar {
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+/* 地圖容器 */
+.map-container {
+    height: 100vh;
+    width: 100%;
+}
+
+/* 餐廳列表樣式 */
+.restaurant-list {
+    max-height: 60vh;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    background-color: #f8f9fa;
+}
+
+.restaurant-item {
+    background-color: white;
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding: 1rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.restaurant-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
+    border-color: #007bff;
+}
+
+.restaurant-item.selected {
+    border-color: #28a745;
+    background-color: #f8fff8;
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.25);
+}
+
+.restaurant-name {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.restaurant-type {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.restaurant-address {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.restaurant-rating {
+    color: #ffc107;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.restaurant-phone {
+    color: #007bff;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.restaurant-phone:hover {
+    text-decoration: underline;
+}
+
+/* 評分星星樣式 */
+.rating-stars {
+    color: #ffc107;
+}
+
+.rating-text {
+    color: #6c757d;
+    margin-left: 0.5rem;
+}
+
+/* 搜尋區域樣式 */
+.search-section {
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    border: 1px solid #e9ecef;
+}
+
+/* 載入指示器和錯誤訊息樣式 */
+#loadingIndicator {
+    display: none;
+}
+
+#errorMessage {
+    display: none;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: 50vh;
+    }
+    
+    .map-container {
+        height: 50vh;
+    }
+    
+    .restaurant-list {
+        max-height: 40vh;
+    }
+}
+
+/* 滾動條樣式 */
+.restaurant-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.restaurant-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.restaurant-list::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.restaurant-list::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* 動畫效果 */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 按鈕樣式增強 */
+.btn {
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+/* 標題樣式 */
+h1, h5 {
+    color: #333;
+}
+
+/* 徽章樣式 */
+.badge {
+    font-size: 0.75rem;
+}
+
+/* 空狀態樣式 */
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
